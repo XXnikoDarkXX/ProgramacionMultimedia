@@ -59,5 +59,17 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="97dp"
+        android:layout_height="19dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintCircle="@drawable/fotaco"
+        app:layout_constraintCircleAngle="@drawable/fotaco"
+        app:layout_constraintCircleRadius="@drawable/fotaco"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="243dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
