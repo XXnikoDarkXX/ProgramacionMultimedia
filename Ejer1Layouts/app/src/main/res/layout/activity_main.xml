@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondo"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
 
     <TextView
@@ -59,17 +60,36 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="97dp"
-        android:layout_height="19dp"
-        android:text="TextView"
-        android:textSize="24sp"
-        app:layout_constraintCircle="@drawable/fotaco"
-        app:layout_constraintCircleAngle="@drawable/fotaco"
-        app:layout_constraintCircleRadius="@drawable/fotaco"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="243dp" />
+    <EditText
+        android:id="@+id/editTextTextPersonName"
 
+        android:layout_width="184dp"
+        android:layout_height="41dp"
+        android:layout_constraintCircle
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/texto"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="239dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="107dp"
+        android:layout_height="110dp"
+        android:foregroundTint="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />""
+
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
