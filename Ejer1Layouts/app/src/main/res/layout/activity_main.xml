@@ -90,7 +90,10 @@
         app:layout_constraintCircle="@id/foto"
         app:layout_constraintCircleAngle="45"
         app:layout_constraintCircleRadius="200dp"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/texto"
+        android:focusedByDefault="true"
+        />
 
     <LinearLayout
         android:layout_width="140dp"
@@ -101,15 +104,18 @@
         app:layout_constraintCircle="@id/foto"
         app:layout_constraintCircleAngle="320"
         app:layout_constraintCircleRadius="200dp"
-        app:layout_constraintEnd_toStartOf="@+id/view">
+        app:layout_constraintStart_toStartOf="parent">
 
         <!--Supuestamente la alerta es por el compact material y demas es decir que me esta pidiendo un tema para swith swith material o switch compact
 pero no se bien arreglarlo -->
+
         <Switch
             android:id="@+id/switch1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/opcion1" />
+            android:text="@string/opcion1"
+
+            />
 
         <Switch
             android:id="@+id/switch2"
@@ -123,5 +129,6 @@ pero no se bien arreglarlo -->
             android:layout_height="wrap_content"
             android:text="@string/opcion3" />
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

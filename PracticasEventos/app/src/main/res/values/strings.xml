@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PracticaEventos</string>
+    <string name="cambia_estilo">Cambiar Estilo</string>
+    <string name="actividad_iniciada">!Actividad Iniciada¡</string>
+    <string name="estilo_cambiado">!Estilo cambiado¡</string>
+
+</resources>
