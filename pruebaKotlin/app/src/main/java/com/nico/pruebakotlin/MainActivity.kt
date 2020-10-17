@@ -48,6 +48,79 @@ class MainActivity : AppCompatActivity() {
             Log.d("array",""+valor)
         }
 
+        //podemos crear matrices se hacen asi y pueden ser irregulares:
+      var matriz= arrayOf(arrayOf(3,-1,'1',"literal",null), arrayOf("3af299",7,false),1)
+     //   (matriz[0] as Array<Int>)[1]=4
+
+     //  Log.d("matriz",""+matriz[0][1])
+        //una matriz normal como se cambia:
+        var matrizEnteros=arrayOf(intArrayOf(3,2,1),intArrayOf(3,2),intArrayOf(1))
+        matrizEnteros[0][2]=0;
+        matrizEnteros[0].set(2,0);
+
+
+        Log.d("matriz",""+matrizEnteros[0][1])
+        //una matriz con diferntes tipos
+        var matriz2=arrayOf(floatArrayOf(3f,2f,1.4f),intArrayOf(3,2),intArrayOf(1))
+        (matriz2[0] as FloatArray).set(2,1.5f);//para cambiar un valor
+
+        var contenidoMatriz:String=" \n";
+        //imprimir matrices con un solo tipo
+        for (fila in matrizEnteros){
+            for(valor in fila){
+                contenidoMatriz+=""+valor+" "
+            }
+            contenidoMatriz+="\n"
+
+        }
+
+        Log.d("recorrerMatriz",""+contenidoMatriz)
+
+        Log.d("matrizIrregular",""+matriz.contentDeepToString())
+
+
+        for(fila in matrizEnteros){
+            for (valor in fila){
+                Log.d("suma",""+this.sumaNumeros(valor,1))
+            }
+            Log.d("Viva la recursividad",imprimeMatrizRecursiva(matrizEnteros,0))
+
+
+        }
+
+
+
+
+
+
+        }
+    fun sumaNumeros( n1:Int,  n2:Int):Int{
+        return n1+n2
 
     }
+
+
+    fun imprimeArrayRecursiva(array:IntArray,cont:Int):String{
+        var res:String="";
+        if(cont>=array.size){
+            //Caso base: He terminado de recorrer
+        }else{
+            res+=""+array[cont]+" "+imprimeArrayRecursiva(array,cont+1)
+        }
+        return res;
+    }
+
+    fun imprimeMatrizRecursiva(matriz:Array<*>,nFila:Int):String{
+        var res:String="";
+        if(nFila>=matriz.size){
+            //Caso base, me he pasado, no hago nada
+        }else{
+            res+=""+imprimeArrayRecursiva(matriz[nFila] as IntArray,
+                0)+"\n"+imprimeMatrizRecursiva(matriz,nFila+1)
+        }
+        return res;
+    }
+
+
 }
+
