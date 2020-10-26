@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LenguajeMudo</string>
+    <string name="textoFormar">Escribe el texto que quieres transformar</string>
+    <string name="traducir">Traducir!!!</string>
+</resources>

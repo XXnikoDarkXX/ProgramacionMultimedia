@@ -1,14 +1,65 @@
-package com.nico.pruebakotlin
+package com.nico.pruebakotlin.actividades
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.nico.pruebakotlin.R
+import com.nico.pruebakotlin.clases.Alumno
+import com.nico.pruebakotlin.clases.Persona
+import com.nico.pruebakotlin.enums.MiEnum
+import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Usando Coleeciones: Treemap
+        var mapa:TreeMap<Float,Double>
+        mapa=TreeMap<Float,Double>()
+        mapa.put(3.5f,3.5)
+
+        //USANDO lista
+        var lista:ArrayList<Int>
+        //para meter valores directamente en un arrayList
+        lista= arrayListOf(3,4,5,6,7,8,9)
+        //USANDO HashMap
+        var mapaHash:HashMap<Int,String>
+        //para añadir valores directamente
+        mapaHash= hashMapOf(6 to "seis",9 to "patata")
+
+        //usando colleciones de kotlin
+        //con el ? detras del tipo podemos ponerle null
+        var listaKotlin:Collection<Int?>
+        listaKotlin= arrayListOf(3,4,5,6,null)
+
+        //Usando Stack
+        var pila:Collection<Int?>
+        pila=Stack<Int?>()
+
+        //Usando hashMap
+        var listaMapaSet:MutableCollection<Int?>
+        pila= hashSetOf<Int?>(3)
+        //vamos a recorrer una coleccion
+        var it:Iterator<Int?>
+        it=lista.iterator()
+
+        while(it.hasNext()){
+           val actual:Int?= it.next()
+        }
+        //tenemos que usar mutable para que se puedan cambiar es decir se pueda usar el .add
+        var listaTradi:MutableList<String>
+        listaTradi=ArrayList<String>()
+        listaTradi.add("a")
+
+        //haciendo un enum class aparte
+        var patata: MiEnum = MiEnum.UNO
+        //Haciendo un enum dentro de una clase
+        var masPatata: Persona.MiEnumPer= Persona.MiEnumPer.UNO
+
+
         //practicas de variables
         var numeroLong:Long=33333333333L
         var numeroShor:Short=23243
@@ -88,12 +139,18 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        var per: Persona = Persona("Nico",1986);
+        per.nombre="Nico";
+
+        Toast.makeText(this,""+per.test,Toast.LENGTH_LONG).show()
+        //usando polimofirmo en kotlin de Persona=Alumno
+        var alu: Persona = Alumno();
+        Toast.makeText(this,""+alu.nombre+" : "+alu.anioNacimiento+" : "+(alu as Alumno).nLista+" : ",Toast.LENGTH_LONG).show()
+
+        cuadroTexto.text
 
 
-
-
-
-        }
+    }
     fun sumaNumeros( n1:Int,  n2:Int):Int{
         return n1+n2
 
