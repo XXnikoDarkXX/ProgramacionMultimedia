@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PruebaTema4</string>
+    <string name="irActividad2">Ir a Actividad 2</string>
+    <string name="soyPantalla2">soyPantalla2</string>
+    <string name="IrActividad3">Ir a actividad 3</string>
+    <string name="soyPantalla3">Soy pantalla 3</string>
 </resources>
