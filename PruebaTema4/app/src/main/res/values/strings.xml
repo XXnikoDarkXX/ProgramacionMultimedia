@@ -4,4 +4,8 @@
     <string name="soyPantalla2">soyPantalla2</string>
     <string name="IrActividad3">Ir a actividad 3</string>
     <string name="soyPantalla3">Soy pantalla 3</string>
+    <string name="aniadirBoton">Añadir boton</string>
+    <string name="botonAniadido">Botón añadido</string>
+    <string name="ponerTexto">Pon un texto aqui</string>
+    <string name="ponerNumero">Pon un numero aqui</string>
 </resources>

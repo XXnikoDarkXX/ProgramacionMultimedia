@@ -1,5 +1,6 @@
 package com.NicolasFernandez.lsedactilologico
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,14 +17,24 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
     }
     //funcion para que cuando le demos un click traduzca el texto que hayamos escrito mediante imagenes
     fun TraducirTexto(view: View) {
+
+
         //es nuestro contener vertical
         var contenedor:LinearLayout =this.findViewById<LinearLayout>(R.id.contenedor)//buscar la id del xml y pasarlo a una variable
+        var imagen:ImageView= ImageView(this)
+        imagen.setImageResource(R.drawable.aa)
+        contenedor.addView(imagen)
+
+
+        
+
+        //es nuestro contener vertical
+    //    var contenedor:LinearLayout =this.findViewById<LinearLayout>(R.id.contenedor)//buscar la id del xml y pasarlo a una variable
         //nuestro texto principalf
-        contenedor.removeAllViewsInLayout()
+        contenedor.removeAllViewsInLayout()//borrar las imagenes del scrollview ya puestas
         var  texto:EditText=this.findViewById(R.id.txtTraducir)
         //Convertimos a String el EditText donde hemos escrito las palabras
         var cadena:String= texto.text.toString()
@@ -40,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 'b'-> {
                     imagen.setImageResource(R.drawable.b)
                     contenedor.addView(imagen)
-                    }
+                }
 
                 'c'->{
                     imagen.setImageResource(R.drawable.c)
@@ -83,7 +94,7 @@ class MainActivity : AppCompatActivity() {
                     imagen.setImageResource(R.drawable.l)
                     contenedor.addView(imagen)
                 }
-              //  'll'->imagen.setImageResource(R.drawable.ll) corregir esto de la ll
+                //  'll'->imagen.setImageResource(R.drawable.ll) corregir esto de la ll
                 'ñ'->{
                     imagen.setImageResource(R.drawable.enie)
                     contenedor.addView(imagen)
@@ -114,7 +125,7 @@ class MainActivity : AppCompatActivity() {
                     imagen.setImageResource(R.drawable.r)
                     contenedor.addView(imagen)
                 }
-               // 'rr'->imagen.setImageResource(R.drawable.rr)
+                // 'rr'->imagen.setImageResource(R.drawable.rr)
                 's'->{
                     imagen.setImageResource(R.drawable.s)
                     contenedor.addView(imagen)
@@ -149,6 +160,7 @@ class MainActivity : AppCompatActivity() {
                     contenedor.addView(imagen)
 
                 }
+
 
             }
 
