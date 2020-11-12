@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">pruebaTriviaWorld</string>
+    <string name="sonido">Sonido</string>
+    <string name="musica">Musica</string>
+    <string name="nivelSonido">Nivel de Sonido</string>
+    <string name="nivelMusica">Nivel de Musica</string>
+    <string name="atras">Atras</string>
+    <string name="cambioPass">Cambiar de Contraseña</string>
+    <string name="user">Usuario</string>
+    <string name="passAntigua">Contraseña Antigua</string>
+    <string name="passNueva">Contraseña Nueva</string>
+    <string name="cambiar">Cambiar</string>
+    <string name="nickName">NickName</string>
+    <string name="puntuacion">Tu puntuacion es: </string>
+    <string name="imagenDescripcion">Imagen de perfil</string>
+    <string name="txtNombre">Nombre</string>
+</resources>

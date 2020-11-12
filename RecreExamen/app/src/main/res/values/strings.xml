@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RecreExamen</string>
+    <string name="txtPrincipal">Texto de la pantalla 1</string>
+    <string name="txtOpcion1">Hombre</string>
+    <string name="txtOpcion2">Mujer</string>
+    <string name="txtOpcion3">Otros</string>
+    <string name="btnEnviar">Enviar</string>
+    <string name="hombre">Eres un hombre</string>
+    <string name="mujer">Eres una mujer</string>
+    <string name="otros">No se lo que eres</string>
+    <string name="txtPantalla2">Soy pantalla2</string>
+
+</resources>

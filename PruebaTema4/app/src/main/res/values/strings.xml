@@ -8,4 +8,12 @@
     <string name="botonAniadido">Botón añadido</string>
     <string name="ponerTexto">Pon un texto aqui</string>
     <string name="ponerNumero">Pon un numero aqui</string>
+    <string name="irActividad4">Ir a actividad4</string>
+    <string name="noPuedoRestaurar">No puedo restaurar estos valores</string>
+    <string name="opcion1">Opcion1</string>
+    <string name="opcion2">Opcion2</string>
+    <string name="pulsame">Pulsame</string>
+    <string name="arriba">Arriba</string>
+    <string name="llamadaDenegada">Me has denegado el permiso de llamar. No puedo hacer esto. Gestionalo desde ajustes aplicaciones -> pruebas t4</string>
+    <string name="permisoDenegado">Permiso denegado. No puedes hacer esto</string>
 </resources>

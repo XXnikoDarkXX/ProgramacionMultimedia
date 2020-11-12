@@ -1,14 +1,19 @@
 package com.nicolasfernandez.pruebatema4
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.core.view.children
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    val contenedor:LinearLayout by lazy{ findViewById<LinearLayout>(R.id.contenedor)}
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         var botonAñadir:Button=findViewById(R.id.botonAniadir)
         //Añadimos un metodo para poder hacer un onclickListener
         //Al hacer click a este boton se le añade al contenedor otros botones
+        var contexto: Context =this
         botonAñadir.setOnClickListener{
             vista:View->
-            var contenedor:LinearLayout= this.findViewById<LinearLayout>(R.id.contenedor)//Variable contenedor donde le añadiremos los botones
             var nuevo:Button= Button(this)//creamos los botones (imaginario)
             nuevo.setText(R.string.botonAniadido)//le escribimos texto al boton
             contenedor.addView(nuevo)//se lo añadimos al contenedor para que se visualice
@@ -82,12 +87,84 @@ class MainActivity : AppCompatActivity() {
         //Metemos al bundle clave y valor que es la variable campoNumero
         bundle.putShort("short1",campoNumero.text.toString().toShort())
 
+
+        var array2:ArrayList<String>;//declaracion
+       array2=ArrayList<String>();//Lo inicializacion para que no sea null ahora mismo esta vacio
+        array2.add("nico")//añadimos nico a la lista
+        array2.add("hola")//añadimos hola a la lista
+
+
+
+        bundle.putStringArrayList("ArrayPrimero",array2)
         pasarActividad.putExtras(bundle)//mediante este metodo metemos a pasarActividad que es un Intent el budle
         this.startActivity(pasarActividad)//y iniciamos la segunda pantalla + metemos el budle
 
 
 
 
+    }
+
+    fun irActiviadad3(view: View) {
+        var pantalla4: Intent=Intent(this,Pantalla4Inicio::class.java)//Guardamos la pantalla2 como tipo Intent
+
+        var bun:Bundle=Bundle()
+        var campoTexto:EditText=findViewById(R.id.campoTexto)
+        var campoNumero:EditText=findViewById(R.id.campoTexto)
+        
+        bun.putString("texto",campoTexto.text.toString())
+
+        try {
+            bun.putShort("numero", campoNumero.text.toString().toShort())
+
+        }catch(e:Exception){
+            bun.putShort("numero",-1)
+        }
+        pantalla4.putExtras(bun)
+
+        this.startActivity(pantalla4)
+
+
+    }
+
+    /**
+     * Funcion para guardar los los botones al cambiar horizontal la pantalla (girar pantalla)
+     */
+    override fun onSaveInstanceState(outState: Bundle){
+        super.onSaveInstanceState(outState)
+        Toast.makeText(this,"OnsaveInstanceState",Toast.LENGTH_LONG).show()
+        var hijos:Sequence<View>
+        hijos=contenedor.children
+
+        val it:Iterator<View>//creamos un iterador para iterar el contenedor
+        it=hijos.iterator()
+        var botones:ArrayList<String> //meteremos en este  array los botones
+
+        botones=ArrayList<String>();
+
+        while(it.hasNext()){
+           botones.add((it.next() as Button).text.toString())
+        }
+       outState.putStringArrayList("botones",botones)
+    }
+
+    /**
+     * Funcion para escribir los botones al girar el movil
+     */
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Toast.makeText(this,"onRestoreInstanceState",Toast.LENGTH_LONG).show()
+        var botones: ArrayList<String>? = savedInstanceState.getStringArrayList("botones")//recogemos la informacion guardada del
+        //onSaveInstanceState
+      if (botones!=null) {
+          for (i in 0 until botones.size) {
+        var boton:Button=Button(this)
+              boton.text=botones.get(i)
+              contenedor.addView(boton)
+          }
+
+      }else{
+          Toast.makeText(this,R.string.noPuedoRestaurar,Toast.LENGTH_LONG).show()
+      }
     }
 
 

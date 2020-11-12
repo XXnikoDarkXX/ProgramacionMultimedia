@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">pruebaProyecto</string>
+
+    <string name="sonido">Sonido</string>
+    <string name="musica">Musica</string>
+    <string name="nivelSonido">Nivel de Sonido</string>
+    <string name="nivelMusica">Nivel de Musica</string>
+    <string name="atras">Atras</string>
+    <string name="cambioPass">Cambiar de Contraseña</string>
+    <string name="user">Usuario</string>
+    <string name="passAntigua">Contraseña Antigua</string>
+    <string name="passNueva">Contraseña Nueva</string>
+</resources>

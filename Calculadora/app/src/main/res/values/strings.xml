@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="txtTitulo">Calculadora</string>
+    <string name="operador1">Operando 1</string>
+    <string name="operador2">Operando 2</string>
+    <string name="txtCalcular">Calcular</string>
+    <string name="resultadosMasAltos">RESULTADOS MÁS ALTOS</string>
+    <string name="txtNumeroOperaciones">0</string>
+    <string name="txtOperacionesAltos">0 operaciones</string>
+</resources>
