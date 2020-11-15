@@ -132,8 +132,8 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle){
         super.onSaveInstanceState(outState)
         Toast.makeText(this,"OnsaveInstanceState",Toast.LENGTH_LONG).show()
-        var hijos:Sequence<View>
-        hijos=contenedor.children
+        var hijos:Sequence<View>//creamos una variable hijo de tipo secuencia que contiene vistas
+        hijos=contenedor.children //Agregamos a hijos los botones que contiene el (contenedor que es un Layout)
 
         val it:Iterator<View>//creamos un iterador para iterar el contenedor
         it=hijos.iterator()
@@ -142,14 +142,14 @@ class MainActivity : AppCompatActivity() {
         botones=ArrayList<String>();
 
         while(it.hasNext()){
-           botones.add((it.next() as Button).text.toString())
+           botones.add((it.next() as Button).text.toString())//Metemos todos los botones hijos en la variable botones
         }
-       outState.putStringArrayList("botones",botones)
+       outState.putStringArrayList("botones",botones)//Se lo agregamos al bundle
     }
 
     /**
      * Funcion para escribir los botones al girar el movil
-     */
+    */
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         Toast.makeText(this,"onRestoreInstanceState",Toast.LENGTH_LONG).show()
@@ -157,14 +157,20 @@ class MainActivity : AppCompatActivity() {
         //onSaveInstanceState
       if (botones!=null) {
           for (i in 0 until botones.size) {
-        var boton:Button=Button(this)
-              boton.text=botones.get(i)
-              contenedor.addView(boton)
+        var boton:Button=Button(this)//creamos un bonton normal dentro del for para que cuando vaya iterando se vaya creando uno ano
+              boton.text=botones.get(i)//Cogemos la variable boton y le añadimos el texto
+              contenedor.addView(boton)//al contenedor le añadimos el boton
           }
 
       }else{
           Toast.makeText(this,R.string.noPuedoRestaurar,Toast.LENGTH_LONG).show()
       }
+    }
+
+    fun irActividad5(view: View) {
+        var irPantalla5:Intent=Intent(this,Pantalla5::class.java)//Guardamos la pantalla2 como tipo Intent
+        this.startActivity(irPantalla5)
+
     }
 
 

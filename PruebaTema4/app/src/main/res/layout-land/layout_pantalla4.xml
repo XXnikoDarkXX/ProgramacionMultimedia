@@ -4,15 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/azulUltramar"
+    >
 
     <RadioGroup
         android:id="@+id/radioGroup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="207dp"
-        android:layout_marginEnd="167dp"
+        android:layout_width="343dp"
+        android:layout_height="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,17 +24,16 @@
 
         <RadioButton
             android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="323dp"
+            android:layout_height="43dp"
             android:text="@string/opcion2" />
     </RadioGroup>
 
     <Spinner
         android:id="@+id/spinner"
-        android:entries="@array/opciones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:entries="@array/opciones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
@@ -44,9 +42,10 @@
         android:id="@+id/abajo"
         android:layout_width="82dp"
         android:layout_height="14dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/arriba"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/arriba"
+        app:layout_constraintEnd_toStartOf="@+id/botonLlamar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
@@ -54,34 +53,31 @@
         android:id="@+id/arriba"
         android:layout_width="116dp"
         android:layout_height="17dp"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="140dp"
         android:hint="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/btnArriba"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonLlamar"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnArriba"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:onClick="pasarTexto"
         android:text="@string/pulsame"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/arriba" />
+        tools:layout_editor_absoluteY="325dp" />
 
     <Button
         android:id="@+id/botonLlamar"
+
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="188dp"
         android:background="@drawable/iconollamada"
         android:onClick="hacerLlamada"
-        app:layout_constraintBottom_toTopOf="@+id/abajo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

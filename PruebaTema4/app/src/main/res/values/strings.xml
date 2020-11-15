@@ -16,4 +16,6 @@
     <string name="arriba">Arriba</string>
     <string name="llamadaDenegada">Me has denegado el permiso de llamar. No puedo hacer esto. Gestionalo desde ajustes aplicaciones -> pruebas t4</string>
     <string name="permisoDenegado">Permiso denegado. No puedes hacer esto</string>
+    <string name="pantalla5">ir a la pantalla 5</string>
+
 </resources>
