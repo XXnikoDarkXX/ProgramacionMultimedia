@@ -173,5 +173,17 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun irPantalla6(view: View) {
+        val Pantalla6:Intent=Intent(this,Pantalla6::class.java)//Guardamos la pantalla2 como tipo Intent
+        this.startActivity(Pantalla6)
+
+    }
+
+    fun irActividadListView(view: View) {
+
+
+
+    }
+
 
 }

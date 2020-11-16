@@ -17,5 +17,9 @@
     <string name="llamadaDenegada">Me has denegado el permiso de llamar. No puedo hacer esto. Gestionalo desde ajustes aplicaciones -> pruebas t4</string>
     <string name="permisoDenegado">Permiso denegado. No puedes hacer esto</string>
     <string name="pantalla5">ir a la pantalla 5</string>
+    <string name="pantalla6">Ir a la pantalla 6</string>
+    <string name="listaArrayAdapter">Lista con ListView + arrayAdapter </string>
+    <string name="txtListView">Ir a la actividad ListView</string>
+    <string name="descricionListaView">Lista con ListView + adapter personalizado</string>
 
 </resources>

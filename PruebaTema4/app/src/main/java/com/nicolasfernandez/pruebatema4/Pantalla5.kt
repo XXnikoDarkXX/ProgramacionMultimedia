@@ -17,8 +17,22 @@ class Pantalla5 : AppCompatActivity() {
         //una vista
        // inflater.inflate(R.layout.parainflar,inflarAqui)//le insertamos para inflar xml al layout a pantalla5
         //Podemos inflar meter todo un layout a otro o meter cosas de un layout
-        val tv:ConstraintLayout=inflater.inflate(R.layout.parainflar,inflarAqui ) as ConstraintLayout
-   tv.setBackgroundColor(resources.getColor(R.color.azulUltramar))
+        //1º FORMA mas utilizada para hacerlo manual
+       // val tv:ConstraintLayout=inflater.inflate(R.layout.parainflar,inflarAqui ) as ConstraintLayout
+       // tv.setBackgroundColor(resources.getColor(R.color.azulUltramar))
+
+        //2ºForma
+        /*
+        val tv:ConstraintLayout=inflater.inflate(R.layout.parainflar,null ) as ConstraintLayout//preparamos para inflar
+        inflarAqui.addView(tv)//decimos donde vamos a inflar
+         tv.setBackgroundColor(resources.getColor(R.color.azulUltramar))*/
+
+        //2º FORMA usamos el tercer argumento por defecto es a false y ya podemos ir elegiendo que inflar
+        val tv:ConstraintLayout=inflater.inflate(R.layout.parainflar,inflarAqui,false ) as ConstraintLayout
+        inflarAqui.addView(tv)//decimos a donde queremos inflar
+        tv.setBackgroundColor(resources.getColor(R.color.azulUltramar))
+
+
 
     }
 }
