@@ -84,7 +84,7 @@ class Pantalla4Inicio : AppCompatActivity() {
     //    //Esto se ejecutara y mostrara el error cuano no se establece por defecto la llamada
     /*
     Cuando ponemos por defecto una opcion usaremos esta funcion
-    @requestCode --> Codigo del permiso peidido
+    @requestCode --> Codigo del permiso pedido
     @permissions --> metemos la lista de permisos que tenemos
     @grantResults --> ultimo permisos que se han concedido
      */

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pruebas tema 5</string>
+    <string name="pruebasSQLite">Pruebas SQLite</string>
+    <string name="tituloInsertar">SQLite: Insertar Usuario</string>
+    <string name="nombreUsuario">Nombre de Usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="insertar">Insertar</string>
+    <string name="borrar">Borrar</string>
+    <string name="modificar">Modificar</string>
+    <string name="tituloModificar">SQLite: Modificar Usuario</string>
+    <string name="listaUsuarios">Listado de usuarios:</string>
+    <string name="usuarioInsertado">Usuario ingresado</string>
+    <string name="errorInsertandoUsuario">No se ha podido insertar el usuario</string>
+</resources>

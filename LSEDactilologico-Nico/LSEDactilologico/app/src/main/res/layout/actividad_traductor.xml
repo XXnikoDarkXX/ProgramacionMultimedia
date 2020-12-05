@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActividadTraductor">
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/creditosAlumnos"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="29dp"
+
+
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="irSobreNosotros"
+        android:text="@string/Creditos"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/rojoRosa"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/btnAyuda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
+
+    <ImageView
+
+        android:id="@+id/imagenLogo"
+        android:layout_width="0dp"
+        android:layout_height="144dp"
+        android:src="@drawable/lsedactilologico_cenec"
+        app:layout_constraintBottom_toTopOf="@+id/creditosAlumnos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="304dp"
+        android:layout_height="127dp"
+
+
+        android:layout_marginTop="1dp"
+
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditosAlumnos">
+
+
+        <EditText
+            android:id="@+id/txtTraducir"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+
+
+            android:autofillHints="no"
+            android:hint="@string/txtEscrito"
+            android:inputType="text"
+            android:textColor="@color/morado"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.219"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/creditosAlumnos" />
+
+
+        <Button
+            android:id="@+id/btnTraducir"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="#AA3939"
+            android:gravity="start"
+            android:onClick="irAlista"
+            android:text="@string/Cambiar"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.835"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.072" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAyuda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:onClick="irAyuda"
+        android:text="@string/txtAyudanos"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/creditosAlumnos" />
+</androidx.constraintlayout.widget.ConstraintLayout>

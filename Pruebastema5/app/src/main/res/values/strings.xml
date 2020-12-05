@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Pruebas tema 5</string>
+    <string name="pruebasSQLite">Pruebas SQLite</string>
+</resources>

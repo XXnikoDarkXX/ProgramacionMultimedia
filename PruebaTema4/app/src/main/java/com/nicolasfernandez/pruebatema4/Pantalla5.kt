@@ -3,6 +3,7 @@ package com.nicolasfernandez.pruebatema4
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import org.w3c.dom.Text

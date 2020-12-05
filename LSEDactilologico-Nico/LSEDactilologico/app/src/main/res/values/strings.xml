@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LSE Dactilológico - CENEC Málaga</string>
+    <string name="Creditos">Creado por los alumnos de 2DAM de Cenec Málaga</string>
+    <string name="Cambiar">Cambiar</string>
+    <string name="txtEscrito">Escribe el texto que quieres traducir</string>
+    <string name="txtSobreNosotros">Este proyecto esta hecho por los alumnos de 2ºDAM de Cenec Málaga</string>
+    <string name="txtContribuidores">Los contribuidores son:</string>
+    <string name="descripcionFotoContribuidor">Foto de un contribuidor</string>
+    <string name="txtAyudanos">Ayudanos a mejorar</string>
+    <string name="txtAyudanos2">Ayudanos a mejorar grabando un audio</string>
+    <string name="txtGrabar">Grabar</string>
+    <string name="permisoDenegado">Me has denegado el permiso</string>
+</resources>
