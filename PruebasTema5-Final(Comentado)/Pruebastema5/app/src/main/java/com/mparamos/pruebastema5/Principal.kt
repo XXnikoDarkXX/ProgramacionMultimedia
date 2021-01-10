@@ -15,4 +15,10 @@ class Principal : AppCompatActivity() {
         val intent: Intent =Intent(this,PruebasSQLite::class.java)
         startActivity(intent)
     }
+
+    fun irAPruebasDeAlmacenamiento(view: View) {
+        val intent: Intent =Intent(this,PruebasAlmacenamiento::class.java)
+        startActivity(intent)
+    }
+
 }

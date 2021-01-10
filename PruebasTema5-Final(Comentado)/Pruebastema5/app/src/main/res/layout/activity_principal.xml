@@ -37,11 +37,21 @@
             android:id="@+id/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/pruebasSQLite"
             android:onClick="irAPruebasSQLite"
+            android:text="@string/pruebasSQLite"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView" />
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnPruebaAlmacenamiento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="irAPruebasDeAlmacenamiento"
+            android:text="@string/txtPruebaAlmacenamiento"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

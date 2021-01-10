@@ -13,5 +13,17 @@
     <string name="usuarioModificado">Usuario Modificado</string>
     <string name="errorInsertandoUsuario">Error insertando usuario</string>
     <string name="errorModificandoUsuario">Error modificando usuario</string>
+    <string name="txtPruebaAlmacenamiento">Pruebas de Almacenamiento</string>
+    <string name="almacenamientoInterno">Almacenamiento Interno Privado</string>
+    <string name="almacenamientoExternoPrivado">Almacenamiento Externo Privado</string>
+    <string name="almacenamientoExternoPublico">Almacenamiento Externo Público</string>
+    <string name="machacarFichero">Machacar Fichero</string>
+    <string name="concatenarContenido">Concatenar al final</string>
+    <string name="nombreFichero">Nombre del fichero</string>
+    <string name="contenido">Escribe aqui el contenido...</string>
+    <string name="guardar">Guardar</string>
+    <string name="rutaActual">Ruta Actual</string>
+    <string name="noImplementado">Aun no esta implementado</string>
+    <string name="ficheroEscrito">Se ha escrito el fichero</string>
 
 </resources>

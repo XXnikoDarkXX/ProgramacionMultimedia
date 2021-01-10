@@ -10,4 +10,5 @@
     <color name="transparentWhite">#ccffffff</color>
     <color name="mainText">#C57C00</color>
     <color name="transparentBlue">#ccaaaaff</color>
+    <color name="gris">#FF888888</color>
 </resources>

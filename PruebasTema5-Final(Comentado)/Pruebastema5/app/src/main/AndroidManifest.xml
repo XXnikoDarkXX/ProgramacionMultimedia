@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebasTema5">
+        <activity android:name=".PruebasAlmacenamiento"></activity>
         <activity
-            android:screenOrientation="landscape"
-            android:name=".PruebasSQLite"></activity>
+            android:name=".PruebasSQLite"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Principal"
             android:screenOrientation="landscape">
