@@ -11,4 +11,5 @@
     <color name="mainText">#C57C00</color>
     <color name="transparentBlue">#ccaaaaff</color>
     <color name="gris">#FF888888</color>
+    <color name="darRed">#AA3939</color>
 </resources>

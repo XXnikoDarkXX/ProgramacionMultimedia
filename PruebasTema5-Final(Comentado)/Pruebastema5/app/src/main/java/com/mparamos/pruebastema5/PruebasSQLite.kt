@@ -31,6 +31,7 @@ class PruebasSQLite : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pruebassqlite)
         refrescarRecyclerDatos()
+
     }
 
     fun refrescarRecyclerDatos(){

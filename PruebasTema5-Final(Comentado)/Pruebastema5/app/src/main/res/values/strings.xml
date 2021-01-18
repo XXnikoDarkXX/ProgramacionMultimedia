@@ -25,5 +25,10 @@
     <string name="rutaActual">Ruta Actual</string>
     <string name="noImplementado">Aun no esta implementado</string>
     <string name="ficheroEscrito">Se ha escrito el fichero</string>
-
+    <string name="haSidoAbierto">abierto con exito</string>
+    <string name="nombrFicheroBorrado">¡Borrado con éxito!.</string>
+    <string name="errorAlBorrar">Error al borrar: </string>
+    <string name="seleccionadoInternoPrivado">Seleccionado almacenamiento interno privado</string>
+    <string name="seleccionadoExternoPrivado">Seleccionado almacenamiento externo privado</string>
+    <string name="seleccionadoExternoPublico">Seleccionado almacenamiento externo público</string>
 </resources>
