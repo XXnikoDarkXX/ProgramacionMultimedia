@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/elementoRaiz"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PruebasSQLite" >
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/moss"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/elementoConFondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/transparentWhite">
+
+        <Switch
+            android:id="@+id/switchModoOscuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="preferenciasModoOscuro"
+            android:text="@string/modoOscuro"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPruebasPreferencias"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/textViewPruebasPreferencias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pruebasPreferencias"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAplicarCambios"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/aplicarCambios"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="aplicarCambiosPreferencias"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btnIrAPrefClasicas"
+            android:layout_width="0dp"
+            android:textSize="20sp"
+            android:backgroundTint="@color/purple_200"
+
+            android:layout_height="wrap_content"
+            android:text="@string/irApreferenciasClasicas"
+            app:layout_constraintBottom_toTopOf="@+id/btnAplicarCambios"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</FrameLayout>
