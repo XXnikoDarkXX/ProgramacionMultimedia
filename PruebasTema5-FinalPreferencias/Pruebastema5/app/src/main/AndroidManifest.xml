@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.mparamos.pruebastema5">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE>" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,9 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebasTema5">
-        <activity android:name=".Madre"></activity>
-        <activity android:name=".Preferencias" />
-        <activity android:name=".CopiadoDeDocumentos" />
+        <activity android:name=".PruebasFirebase"></activity>
+        <activity android:name=".PreferenciasV2Activity" />
+        <activity android:name=".Madre" />
+        <activity android:name=".PruebasPreferencias" />
         <activity android:name=".PruebasAlmacenamiento" />
         <activity
             android:name=".PruebasSQLite"

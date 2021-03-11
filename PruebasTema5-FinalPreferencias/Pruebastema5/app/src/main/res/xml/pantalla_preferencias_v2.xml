@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        android:key="modoOscuro"
+        android:switchTextOff="@string/modoClaro"
+        android:switchTextOn="@string/modoOscuro"
+        android:defaultValue="false"
+        ></SwitchPreference>
+    <EditTextPreference
+        android:key="ficheroTextoDefecto"
+        android:defaultValue=""
+        android:title="@string/ficheroPorDefecto"
+        ></EditTextPreference>
+    <DropDownPreference
+        android:key="modoAlmacenamientoDefecto"
+        android:title="@string/ficheroPorDefecto"
+        android:defaultValue="0"
+        ></DropDownPreference>
+
+</androidx.preference.PreferenceScreen>

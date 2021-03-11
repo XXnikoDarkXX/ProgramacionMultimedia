@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tiposAlmacenamiento">
+        <item>@string/almacenamientoInterno</item>
+        <item>@string/almacenamientoExternoPrivado</item>
+    </string-array>
+
+
+</resources>

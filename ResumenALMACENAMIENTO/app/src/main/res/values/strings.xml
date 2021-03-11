@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">EjercicioExamen</string>
+    <string name="pruebaAlmacenamiento">Pruebas Almacenamiento</string>
+    <string name="almacenamientoInterno">Almacenamiento interno privado</string>
+    <string name="almacenamientoExternoPrivado">Almacenamiento externo privado</string>
+    <string name="almacenamientoExternoPublico">Almacenamiento externo publico</string>
+    <string name="machacarFichero">Machacar Fichero</string>
+    <string name="concatenarContenido">Concatenar al final</string>
+    <string name="nombreFichero">Nombre Fichero</string>
+    <string name="campoContenidoArchivo">Escribe aqui el contenido</string>
+    <string name="botonGuardar">GUARDAR</string>
+    <string name="rutaActual">Ruta actual</string>
+    <string name="noImplementado">Aún no está implementado</string>
+    <string name="ficheroEscrito">Fichero escrito!</string>
+    <string name="haSidoAbierto">Abierto con exito!</string>
+    <string name="ficheroBorrado">Borrado con exito</string>
+    <string name="errorAlBorrar">Error al borrar</string>
+    <string name="seleccionadoInternoPrivado">Seleccionado almacenamiento interno privado</string>
+    <string name="seleccionadoExternoPrivado">Seleccionado almacenamiento externo privado</string>
+    <string name="seleccionadoExternoPublico">Seleccionado almacenamiento externo publico</string>
+    <string name="botonCopiadoDeDocumentos">Copiado de documentos</string>
+    <string name="lecturaOEscritura">Lectura o escritura</string>
+    <string name="pruabasPreferencias">Pruebas de Preferencias</string>
+    <string name="modoOscuro">Modo Oscuro</string>
+    <string name="aplicarCambios">Aplicar cambios</string>
+    <string name="irAPreferenciasClasicas">Preferencias (Modo Clasico)</string>
+    <string name="cambiosAplicados">Cambios aplicados</string>
+    <string name="ficheroPorDefecto">Fichero por defecto</string>
+    <string name="modoClaro">Modo claro</string>
+    <string name="registrarse">Registrate</string>
+
+
+</resources>

@@ -59,9 +59,7 @@ class ListaAlmacenamientoAdapter(val contexto: PruebasAlmacenamiento, val datos:
                 2 -> {
                     val ruta: String ="/storage/emulated/0/"+Environment.DIRECTORY_DOWNLOADS
                     var archivo: File? =File(ruta+"/"+nombreFicheroActual.toString())
-                    //  var archivo: File? = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/"+nombreFicheroActual.toString())
-                    lector = BufferedReader(FileReader(archivo))
-                    //    lector = BufferedReader(FileReader(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS + "/" + nombreFicheroActual.toString())))
+                      lector = BufferedReader(FileReader(archivo))
 
                 }
             }
@@ -83,7 +81,10 @@ class ListaAlmacenamientoAdapter(val contexto: PruebasAlmacenamiento, val datos:
 
 
         }
-
+        /**
+         * Desde aqui borramos los archivos segun sea el tipo de almacenamiento usado.
+         * Normalmente usamos el Files.delete
+         */
         botonBorrarFichero.setOnClickListener {
             when (contexto.tipoAlmacenamientoSeleccionado) {
 
@@ -103,7 +104,7 @@ class ListaAlmacenamientoAdapter(val contexto: PruebasAlmacenamiento, val datos:
                     var ruta: String = contexto.getExternalFilesDir(null).toString() + "/" + nombreFicheroActual + ".txt"
                     var archivo: File? = contexto.getExternalFilesDir(nombreFicheroActual)
 
-
+                    //si el archivo existe lo eliminamos
                     if (archivo?.exists() == true) {
                         archivo?.delete()
                         Toast.makeText(contexto, nombreFicheroActual + " " + contexto.resources.getString(R.string.nombrFicheroBorrado), Toast.LENGTH_LONG).show()
@@ -117,7 +118,6 @@ class ListaAlmacenamientoAdapter(val contexto: PruebasAlmacenamiento, val datos:
 
                 2 -> {
                     var nombreFicheroActual: String = datos[position]
-               //     var archivo: File? = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS + "/" + nombreFicheroActual.toString())
 
                     val ruta: String ="/storage/emulated/0/"+Environment.DIRECTORY_DOWNLOADS
                     var archivo: File? =File(ruta+"/"+nombreFicheroActual.toString())

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "355115790834",
+    "project_id": "pruebas-tema-5-base-de-datos",
+    "storage_bucket": "pruebas-tema-5-base-de-datos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355115790834:android:817c6c459a80bddbcdbb6b",
+        "android_client_info": {
+          "package_name": "com.mparamos.pruebastema5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355115790834-72a6mcn4sdvmon02hmp2vq05of4t6p15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3W2ngHSfWk8f9SrMPojbPR2DKpMrylK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355115790834-72a6mcn4sdvmon02hmp2vq05of4t6p15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

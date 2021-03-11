@@ -70,18 +70,22 @@ class PruebasAlmacenamiento : AppCompatActivity() {
                         }
                     }
                     2 -> {
+                        if ( permisoAlmacenamientoPrivadoExterno()==true){
                         Toast.makeText(p1!!.context,R.string.seleccionadoExternoPublico,Toast.LENGTH_LONG).show()
 
                         tipoAlmacenamientoSeleccionado=2;
                         recargarListaArchivos(tipoAlmacenamientoSeleccionado)
                         rutaActual.setText(""+Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS))
                     }
+                        }
                 }
             }
 
         }
+       if ( permisoAlmacenamientoPrivadoExterno()==true){
+           recargarListaArchivos(tipoAlmacenamientoSeleccionado);
+       }
 
-        recargarListaArchivos(tipoAlmacenamientoSeleccionado);
 
     }
 
@@ -101,12 +105,10 @@ class PruebasAlmacenamiento : AppCompatActivity() {
 
                 }
                 2->{
-
                     val ruta: String ="/storage/emulated/0/"+Environment.DIRECTORY_DOWNLOADS
-                    val file:File=File(ruta)
+
                     archivos=File(ruta).list()
                     //el obsoleto
-
                 }
         }
         val adapter:ListaAlmacenamientoAdapter =ListaAlmacenamientoAdapter(this,archivos)
@@ -209,35 +211,6 @@ class PruebasAlmacenamiento : AppCompatActivity() {
         }
     }
 
-    public override fun onActivityResult(requestCode: Int, resultCode: Int,resultData: Intent?) {
-        super.onActivityResult(requestCode, resultCode,
-                resultData)
-        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            resultData?.data?.also { uri ->
-//ACCIÓN CON LA URI. Hay dos comentadas,  usad la que convenga.
-// Toast.makeText(this,leerTextoDesdeUri(uri), Toast.LENGTH_LONG).show()
-                //escribirTextoAUri(uri)
-            }}
-    }
-
-    private fun leerTextoDesdeUri(uri: Uri): String {
-        //Paso 1: Obtenemos un fileDescriptor en modo lectura para la
-        //uri. Los FileDescriptor tienen info del archivo, y se pueden abrir
-        //con FileWriter o FileReader.
-        val parcelFileDescriptor: ParcelFileDescriptor = contentResolver.openFileDescriptor(uri, "r")!!
-        val fileDescriptor: FileDescriptor = parcelFileDescriptor.fileDescriptor
-        //Paso 2: Usamos una clase de lectura para leer el fileDescriptor
-        var fr: BufferedReader = BufferedReader(FileReader(fileDescriptor))
-
-        //Paso 3: Leemos con normalidad
-        var texto:String=""
-        var lineaActual:String?="";
-        do{
-            texto+=lineaActual
-            lineaActual=fr.readLine()
-        }while(lineaActual!=null);
-        return texto
-    }
 
 }
 

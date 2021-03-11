@@ -1,26 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/elementoRaiz"
+    android:id="@+id/botonRegistrado"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Principal">
+    tools:context=".Principal" >
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:adjustViewBounds="true"
+        android:src="@drawable/moss"
         android:scaleType="centerCrop"
-        android:src="@drawable/moss" />
+        android:adjustViewBounds="true"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/elementoConFondo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/transparentWhite">
+        android:id="@+id/elementoConFondo"
+        android:background="@color/transparentWhite"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/formularioRegistro"
+            android:layout_width="0dp"
+            android:layout_height="146dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/campoEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/nombreUsuario"
+
+                android:inputType="textPersonName"
+
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/campoPassword"
+                android:hint="@string/contraseña"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/botonLogin"
+                    android:onClick="accionIniciarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/design_default_color_secondary_variant"
+                    android:text="login" />
+
+                <Button
+                    android:id="@+id/btnRegistro"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="clickBotonRegistrarse"
+                    android:text="@string/registrarse" />
+            </LinearLayout>
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView"
@@ -40,42 +95,70 @@
             android:id="@+id/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:onClick="irAPruebasSQLite"
             android:text="@string/pruebasSQLite"
+            android:onClick="irAPruebasSQLite"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/btnPruebaAlmacenamiento"
-            android:layout_width="0dp"
-
-            android:layout_height="wrap_content"
-            android:onClick="irAPruebasDeAlmacenamiento"
-            android:text="@string/txtPruebaAlmacenamiento"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/btnCopiadoDeDocumentos"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:onClick="irCopiadoDeDocumentos"
-            android:text="@string/txtCopiadoDeDocumentos"
-            app:layout_constraintBottom_toTopOf="@+id/btnPruebaAlmacenamiento"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/textView" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/preferencias"
-            android:onClick="irAPrefencias"
-            app:layout_constraintBottom_toTopOf="@+id/btnCopiadoDeDocumentos"
+            android:onClick="irAPruebasAlmacenamiento"
+            android:text="@string/pruebasAlmacenamiento"
+            app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/button" />
+
+        <Button
+            android:id="@+id/botonIrAPruebasAlmacenamiento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pruebasPreferencias"
+            android:onClick="irAPruebasPreferencias"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="@+id/button2" />
+
+        <LinearLayout
+
+            android:id="@+id/panelUsuarioLogado"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/infoUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bienvenido"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/botonLogout"
+                android:onClick="accionLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/logout" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/irAfireBase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pruebasFirebase"
+            android:onClick="irAPruebasFireBase"
+            app:layout_constraintBottom_toTopOf="@+id/botonIrAPruebasAlmacenamiento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/botonIrAPruebasAlmacenamiento" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

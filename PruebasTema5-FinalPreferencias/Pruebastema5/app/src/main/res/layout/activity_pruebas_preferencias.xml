@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/botonRegistrado"
+    android:layout_height="match_parent"
+    tools:context=".PruebasPreferencias" >
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/moss"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/elementoConFondo"
+        android:layout_width="match_parent"
+        android:background="@color/transparentWhite"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="@string/pruebasPreferencias"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:textColor="@color/black"
+            android:id="@+id/switchModoOscuro"
+            android:onClick="preferenciaModoOscuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/modoOscuro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/botonAplicarCambios"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="aplicarCambiosPreferencias"
+            android:text="@string/aplicarCambios"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/irAPrefsClasicas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:onClick="irAPreferenciasClasicas"
+            android:backgroundTint="@color/purple_700"
+            android:text="@string/irAPrefenciasClasicas"
+            app:layout_constraintBottom_toTopOf="@+id/botonAplicarCambios"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/campoPrefFicheroTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/ficheroPorDefecto"
+            android:inputType="textPersonName"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchModoOscuro" />
+
+        <Spinner
+            android:id="@+id/spinnerPrefsAlmacenamientoDefecto"
+            android:entries="@array/tiposAlmacenamiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="7dp"
+            android:background="@color/teal_700"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/campoPrefFicheroTexto" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

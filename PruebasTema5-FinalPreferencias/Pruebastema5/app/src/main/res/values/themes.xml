@@ -12,5 +12,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="editTextStyle">
+            @style/estiloCamposTexto
+        </item>
+    </style>
+
+    <style name="estiloCamposTexto" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">3dp</item>
+
+        <item name="android:textColorHint">@color/purple_500</item>
+
     </style>
 </resources>
