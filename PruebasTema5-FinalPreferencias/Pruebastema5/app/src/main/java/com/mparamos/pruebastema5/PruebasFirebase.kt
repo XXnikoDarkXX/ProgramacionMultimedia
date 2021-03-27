@@ -4,8 +4,11 @@ import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.EditText
+import android.widget.ListView
 import android.widget.Toast
+import clases.Articulo
 import com.google.android.gms.tasks.OnCompleteListener
 
 class PruebasFirebase : Madre() {
@@ -36,5 +39,56 @@ class PruebasFirebase : Madre() {
                     Toast.makeText( selfRef,R.string.insercionFallida,Toast.LENGTH_LONG).show()
                 }
             })
+        refrescarLista()
+    }
+
+    fun refrescarLista():Unit{
+        var listaConsultas:ListView=findViewById<ListView>(R.id.listaConsultas)
+        val selfRef=this
+        //Si no esta vacia la coleccion la consultamos
+        if (!coleccion.text.toString().isBlank()){
+                firebaseDB.collection(coleccion.text.toString()).get().addOnCompleteListener {
+                    task ->
+                    if (task.isSuccessful){
+                        var resultados=task.result?.documents
+                    if (resultados!=null){
+
+                        val adapter=ArrayAdapter(selfRef,android.R.layout.simple_list_item_1,resultados)
+                        listaConsultas.adapter=adapter
+                       /* for(elemento in resultados){
+                            Toast.makeText(selfRef,elemento.getString("cl1"),Toast.LENGTH_LONG).show()
+
+                        }*/
+                    }
+
+                    }else{
+                        Toast.makeText(selfRef,task.exception?.message,Toast.LENGTH_LONG).show()
+                    }
+
+                }
+
+        }
+
+    }
+
+    fun clickBotonConsultar(view: View) {
+
+        var art:Articulo= Articulo("micro",50.3f,true)
+        val selfRef:Activity=this;
+        firebaseDB.collection(coleccion.text.toString()).document(documento.text.toString())
+            .set(art).addOnCompleteListener(this,
+            OnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText( selfRef,R.string.insercionOk,Toast.LENGTH_LONG).show()
+                }else{
+                    Toast.makeText( selfRef,R.string.insercionFallida,Toast.LENGTH_LONG).show()
+                }
+            })
+
+
+        refrescarLista()
+
+
+
     }
 }

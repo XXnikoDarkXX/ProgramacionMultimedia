@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "23495392980",
+    "project_id": "extranotafirebase",
+    "storage_bucket": "extranotafirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23495392980:android:895c8ac0a3ce7ca08b4541",
+        "android_client_info": {
+          "package_name": "com.nicolasfernandez.extranotafirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23495392980-0gaf8m063rlftbdl4udkgo1n6rcb32ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3Rd3aqJd8Gme8NowBFCkGxLD5U58DSV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23495392980-0gaf8m063rlftbdl4udkgo1n6rcb32ff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "444852063693",
+    "project_id": "firecreacion",
+    "storage_bucket": "firecreacion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444852063693:android:b6f97099044ee80f4ac884",
+        "android_client_info": {
+          "package_name": "com.nicolasfernandez.firecreacion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444852063693-espnu1cjpqvgv9r11jbuusvamn97la00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-sWQaoefv__xrn2UWk1HjYRmyRd7trBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444852063693-espnu1cjpqvgv9r11jbuusvamn97la00.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

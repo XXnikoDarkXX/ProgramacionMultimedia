@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ExamenMarzo2021" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/negro</item>
+        <item name="colorPrimaryVariant">@color/negroTransparente</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blanco</item>
+        <item name="colorSecondaryVariant">@color/blanco</item>
+        <item name="colorOnSecondary">@color/negro</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textViewStyle">@style/textViews</item>
+        <item name="editTextStyle">@style/editTexts</item>
+    </style>
+
+    <style name="textViews" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="editTexts" parent="@android:style/Widget.EditText">
+        <item name="android:background">@color/blancoTransparente</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+</resources>

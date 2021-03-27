@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Examen Marzo 2021</string>
+    <string name="aprobare">¿Aprobaré esta asignatura?</string>
+    <string name="nombreApellidos">Nombre y apellidos del alumno/a</string>
+    <string name="dni">DNI del Alumno/a</string>
+    <string name="mensajeProfesor">Deja un mensaje al profesor</string>
+    <string name="aprobarasONo">¿Crees que aprobarás la asignatura?</string>
+    <string name="guardar">Guardar</string>
+    <string name="consultar">Consultar</string>
+    <string name="borrar">Borrar</string>
+</resources>

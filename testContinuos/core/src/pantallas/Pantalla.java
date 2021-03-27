@@ -27,10 +27,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
+import basedatos.BaseDatos;
 import personajes.Alien;
 import personajes.Objeto;
 
 public abstract class Pantalla extends Stage {
+    private BaseDatos baseDatos;
     private ScreenViewport camara; //Cámara
     private ArrayList<Objeto> jugadores; //Personajes que controlo
     private ArrayList<Objeto> npc; //Personajes que no controlo

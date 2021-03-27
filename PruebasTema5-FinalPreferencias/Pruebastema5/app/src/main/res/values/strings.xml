@@ -55,4 +55,5 @@
     <string name="insercionOk">Dato insertado correctamente</string>
     <string name="insercionFallida">La insercion ha fallado</string>
     <string name="nombreDocumento">Nombre del documento</string>
+    <string name="consultar">Consultar</string>
 </resources>

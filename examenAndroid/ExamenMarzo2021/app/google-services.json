@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "111107804585",
+    "project_id": "examen-marzo-2021",
+    "storage_bucket": "examen-marzo-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111107804585:android:488f1c575321ec72e588b8",
+        "android_client_info": {
+          "package_name": "com.mparamos.examenmarzo2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111107804585-netusuujqig4pl0tpla4i0ahebc2u64m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFDInrE7nxyDBGehAiZTy2zDsMogP-79o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111107804585-netusuujqig4pl0tpla4i0ahebc2u64m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
