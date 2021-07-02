@@ -17,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebasTema4">
+        <activity android:name="adaptersyholders.pruebaRecycler"></activity>
         <activity android:name=".ActividadRecyclerView" />
         <activity android:name=".ActividadListView" />
         <activity android:name=".ActividadArrayAdapter" />

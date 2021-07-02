@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.ListView
 import android.widget.Toast
 import clases.Articulo
+import clases.Usuario
 import com.google.android.gms.tasks.OnCompleteListener
 
 class PruebasFirebase : Madre() {
@@ -73,7 +74,7 @@ class PruebasFirebase : Madre() {
 
     fun clickBotonConsultar(view: View) {
 
-        var art:Articulo= Articulo("micro",50.3f,true)
+       /* var art:Articulo= Articulo("micro",50.3f,true)
         val selfRef:Activity=this;
         firebaseDB.collection(coleccion.text.toString()).document(documento.text.toString())
             .set(art).addOnCompleteListener(this,
@@ -87,8 +88,23 @@ class PruebasFirebase : Madre() {
 
 
         refrescarLista()
+*/
+consultarTodosDocumentos()
 
+    }
 
+    fun consultarTodosDocumentos(){
+        firebaseDB.collection("pruebas")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+
+                  Toast.makeText(this,document.toString(),Toast.LENGTH_LONG).show()
+
+                }
+            }
+            .addOnFailureListener { exception ->
+            }
 
     }
 }
